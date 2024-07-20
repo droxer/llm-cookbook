@@ -1,25 +1,9 @@
-from dotenv import load_dotenv
-
-load_dotenv()
-
-
-import os
-
 from langchain_community.graphs import Neo4jGraph
-
-os.environ["NEO4J_URI"] = "bolt://localhost:7687"
-os.environ["NEO4J_USERNAME"] = "neo4j"
-os.environ["NEO4J_PASSWORD"] = "password"
-
-graph = Neo4jGraph()
-
-
-import os
 
 from langchain_experimental.graph_transformers import LLMGraphTransformer
 from langchain_openai import ChatOpenAI
 
-llm = ChatOpenAI(temperature=0, model_name="gpt-4o")
+llm = ChatOpenAI(temperature=0, model_name="gpt-4o-mini")
 
 llm_transformer = LLMGraphTransformer(llm=llm)
 
@@ -36,4 +20,5 @@ graph_documents = llm_transformer.convert_to_graph_documents(documents)
 print(f"Nodes:{graph_documents[0].nodes}")
 print(f"Relationships:{graph_documents[0].relationships}")
 
+graph = Neo4jGraph()
 graph.add_graph_documents(graph_documents)

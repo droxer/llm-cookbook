@@ -14,7 +14,7 @@ cathy = ConversableAgent(
             }
         ]
     },
-    human_input_mode="NEVER",  # Never ask for human input.
+    human_input_mode="NEVER",
 )
 
 joe = ConversableAgent(
@@ -29,7 +29,7 @@ joe = ConversableAgent(
             }
         ]
     },
-    human_input_mode="NEVER",  # Never ask for human input.
+    human_input_mode="NEVER",
 )
 
-result = joe.initiate_chat(cathy, message="Cathy, tell me a joke.", max_turns=2)
+result = joe.initiate_chat(cathy, message="Cathy, 给我讲一个笑话.", max_turns=5)

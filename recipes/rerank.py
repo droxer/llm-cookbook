@@ -2,6 +2,7 @@ from sentence_transformers import CrossEncoder
 
 model = CrossEncoder(
     "jinaai/jina-reranker-v2-base-multilingual",
+    # "BAAI/bge-reranker-v2-m3",
     automodel_args={"torch_dtype": "auto"},
     trust_remote_code=True,
 )

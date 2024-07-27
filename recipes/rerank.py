@@ -1,4 +1,3 @@
-from icecream import ic
 from sentence_transformers import CrossEncoder
 
 model = CrossEncoder(
@@ -31,9 +30,9 @@ scores = model.predict(sentence_pairs, convert_to_tensor=True).tolist()
 """
 
 rankings = model.rank(query, documents, return_documents=True, convert_to_tensor=True)
-ic(f"Query: {query}")
+print(f"Query: {query}")
 for ranking in rankings:
-    ic(
+    print(
         f"ID: {ranking['corpus_id']}, Score: {ranking['score']:.4f}, Text: {ranking['text']}"
     )
 """

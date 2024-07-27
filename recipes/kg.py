@@ -1,7 +1,6 @@
 from langchain_experimental.graph_transformers import LLMGraphTransformer
 from langchain_core.documents import Document
 from langchain_openai import ChatOpenAI
-from icecream import ic
 
 llm = ChatOpenAI(temperature=0, model_name="gpt-4o-mini")
 
@@ -15,5 +14,5 @@ She was, in 1906, the first woman to become a professor at the University of Par
 """
 documents = [Document(page_content=text)]
 graph_documents = llm_transformer.convert_to_graph_documents(documents)
-ic(f"Nodes:{graph_documents[0].nodes}")
-ic(f"Relationships:{graph_documents[0].relationships}")
+print(f"Nodes:{graph_documents[0].nodes}")
+print(f"Relationships:{graph_documents[0].relationships}")

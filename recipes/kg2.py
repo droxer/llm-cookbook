@@ -1,6 +1,5 @@
 from langchain_core.prompts import PromptTemplate
 from langchain_community.chat_models import ChatOllama
-from icecream import ic
 
 
 llm = ChatOllama(
@@ -46,4 +45,4 @@ prompt_template = PromptTemplate(
 chain = prompt_template | llm
 
 output = chain.invoke({"text": text})
-ic(output)
+print(output)

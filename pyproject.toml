@@ -19,7 +19,7 @@ langchain-experimental = "^0.0.62"
 neo4j = "^5.22.0"
 pyautogen = "^0.2.32"
 transformers = "^4.42.4"
-torch = "^2.4.0"
+torch = "^2.3.0"
 sentence-transformers = "^3.0.1"
 einops = "^0.8.0"
 

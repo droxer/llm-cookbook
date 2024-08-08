@@ -6,6 +6,12 @@ authors = ["He Fei <droxer.he@gmail.com>"]
 readme = "README.md"
 packages = [{include = "llm-cookbook"}]
 
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple"
+priority = "primary"
+
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
 numpy = "^1.26.4"
@@ -21,9 +27,9 @@ transformers = "^4.42.4"
 torch = "^2.3.0"
 sentence-transformers = "^3.0.1"
 einops = "^0.8.0"
-xinference = "^0.13.3"
 llama-cpp-python = "^0.2.83"
 httpx = {extras = ["socks"], version = "^0.27.0"}
+graphrag = "^0.2.1"
 
 
 [build-system]

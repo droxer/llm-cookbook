@@ -1,4 +1,5 @@
 from sentence_transformers import CrossEncoder
+from icecream import ic
 
 model = CrossEncoder(
     "jinaai/jina-reranker-v2-base-multilingual",
@@ -31,9 +32,9 @@ scores = model.predict(sentence_pairs, convert_to_tensor=True).tolist()
 """
 
 rankings = model.rank(query, documents, return_documents=True, convert_to_tensor=True)
-print(f"Query: {query}")
+ic(f"Query: {query}")
 for ranking in rankings:
-    print(
+    ic(
         f"ID: {ranking['corpus_id']}, Score: {ranking['score']:.4f}, Text: {ranking['text']}"
     )
 """

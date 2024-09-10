@@ -9,7 +9,7 @@ cathy = ConversableAgent(
         "config_list": [
             {
                 "model": "gpt-4o-mini",
-                "temperature": 0.9,
+                "temperature": 0.7,
                 "api_key": os.environ.get("OPENAI_API_KEY"),
             }
         ]

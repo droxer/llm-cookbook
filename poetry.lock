@@ -2591,6 +2591,26 @@ url = "https://mirrors.aliyun.com/pypi/simple"
 reference = "aliyun"
 
 [[package]]
+name = "langchain-experimental"
+version = "0.3.2"
+description = "Building applications with LLMs through composability"
+optional = false
+python-versions = ">=3.9,<4.0"
+files = [
+    {file = "langchain_experimental-0.3.2-py3-none-any.whl", hash = "sha256:b6a26f2a05e056a27ad30535ed306a6b9d8cc2e3c0326d15030d11b6e7505dbb"},
+    {file = "langchain_experimental-0.3.2.tar.gz", hash = "sha256:d41cc28c46f58616d18a1230595929f80a58d1982c4053dc3afe7f1c03f22426"},
+]
+
+[package.dependencies]
+langchain-community = ">=0.3.0,<0.4.0"
+langchain-core = ">=0.3.6,<0.4.0"
+
+[package.source]
+type = "legacy"
+url = "https://mirrors.aliyun.com/pypi/simple"
+reference = "aliyun"
+
+[[package]]
 name = "langchain-openai"
 version = "0.2.2"
 description = "An integration package connecting OpenAI and LangChain"
@@ -6557,4 +6577,4 @@ reference = "aliyun"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "a82ced298efbf47f93969bfa22028bd071ddc6b06e7bcab39041eafadd2da787"
+content-hash = "143d31cf711cb381ef9abe844a8d4b250f69333ed0d6b085e4b536e07d50ff61"

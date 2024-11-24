@@ -3,6 +3,11 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from icecream import ic
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 physics_template = """You are a very smart physics professor. \
 You are great at answering questions about physics in a concise and easy to understand manner. \
@@ -38,5 +43,5 @@ chain = (
     | StrOutputParser()
 )
 
-print(chain.invoke("What's a black hole"))
-print(chain.invoke("What's a path integral"))
+ic(chain.invoke("What's a black hole"))
+ic(chain.invoke("What's a path integral"))

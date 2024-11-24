@@ -37,3 +37,6 @@ chain = (
     | ChatOpenAI(temperature=0, model_name="gpt-4o-mini")
     | StrOutputParser()
 )
+
+print(chain.invoke("What's a black hole"))
+print(chain.invoke("What's a path integral"))

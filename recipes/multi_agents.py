@@ -32,4 +32,4 @@ joe = ConversableAgent(
     human_input_mode="NEVER",
 )
 
-result = joe.initiate_chat(cathy, message="Cathy, 给我讲一个笑话.", max_turns=5)
+result = joe.initiate_chat(cathy, message="Cathy, 给我讲一个笑话.", max_turns=2)

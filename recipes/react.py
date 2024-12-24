@@ -17,3 +17,5 @@ tools = load_tools(["google-serper", "llm-math"], llm=llm)
 agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
 
 agent.run("奥利维亚·王尔德的男朋友是谁?他现在的年龄的0.23次方是多少?")
+
+agent.run("")

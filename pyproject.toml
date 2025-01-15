@@ -39,6 +39,7 @@ openai = "^1.55.0"
 numexpr = "^2.10.2"
 flaml = {extras = ["automl"], version = "^2.3.2"}
 mem0ai = "^0.1.33"
+markitdown = "^0.0.1a3"
 
 
 [build-system]

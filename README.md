@@ -1,4 +1,4 @@
-# Learning LLM
+# LLM Cookbook
 
 
 ### Up and running

@@ -1,5 +1,5 @@
 from sentence_transformers import SentenceTransformer, util
-from icecream import ic
+from rich import print as rprint
 
 from dotenv import load_dotenv
 
@@ -39,10 +39,10 @@ corpus_embeddings = util.normalize_embeddings(corpus_embeddings)
 
 for query in queries:
     query_embedding = embedder.encode(query, convert_to_tensor=True)
-    ic("\nQuery:", query)
-    ic("Top 5 most similar sentences in corpus:")
+    rprint("\nQuery:", query)
+    rprint("Top 5 most similar sentences in corpus:")
 
     hits = util.semantic_search(query_embedding, corpus_embeddings, top_k=5)
     hits = hits[0]  # Get the hits for the first query
     for hit in hits:
-        ic(corpus[hit["corpus_id"]], "(Score: {:.4f})".format(hit["score"]))
+        rprint(corpus[hit["corpus_id"]], "(Score: {:.4f})".format(hit["score"]))

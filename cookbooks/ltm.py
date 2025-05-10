@@ -24,7 +24,7 @@ config = {
 
 
 mem0 = MemoryClient(api_key=os.environ["MEM0_API_KEY"])
-llm = ChatOpenAI(model="qwen-max", api_key=os.getenv("BAILIAN_API_KEY"), base_url=os.getenv("BAILIAN_API_URL"))
+llm = ChatOpenAI(model="gpt-4o-mini")
 
 prompt = ChatPromptTemplate.from_messages([
     SystemMessage(content="""You are a helpful travel agent AI. Use the provided context to personalize your responses and remember user preferences and past interactions. 

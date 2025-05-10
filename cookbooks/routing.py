@@ -3,7 +3,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from icecream import ic
+from rich import print as rprint
 
 from dotenv import load_dotenv
 
@@ -43,5 +43,5 @@ chain = (
     | StrOutputParser()
 )
 
-ic(chain.invoke("What's a black hole"))
-ic(chain.invoke("What's a path integral"))
+rprint(chain.invoke("What's a black hole"))
+rprint(chain.invoke("What's a path integral"))

@@ -1,13 +1,13 @@
 from transformers import AutoTokenizer
-from icecream import ic
+from rich import print as rprint
 
 tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
 
 sequence = "Using a Transformer network is simple"
 tokens = tokenizer.tokenize(sequence)
 
-ic(tokens)
+rprint(tokens)
 
 ids = tokenizer.convert_tokens_to_ids(tokens)
 
-ic(ids)
+rprint(ids)

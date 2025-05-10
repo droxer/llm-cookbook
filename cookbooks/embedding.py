@@ -1,7 +1,7 @@
 from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim
 
-from icecream import ic
+from rich import print as rprint
 
 model = SentenceTransformer(
     "jinaai/jina-embeddings-v2-base-zh",
@@ -14,7 +14,7 @@ model = SentenceTransformer(
 model.max_seq_length = 1024
 
 embeddings = model.encode(["How is the weather today?", "今天天气怎么样?"])
-ic(cos_sim(embeddings[0], embeddings[1]))
+rprint(cos_sim(embeddings[0], embeddings[1]))
 
 similarities = model.similarity(embeddings[0], embeddings[1])
-ic(similarities)
+rprint(similarities)

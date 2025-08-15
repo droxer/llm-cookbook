@@ -1,23 +1,14 @@
 [project]
 name = "llm-cookbook"
 version = "0.1.0"
-description = "Add your description here"
+description = "LLM Cookbook"
 readme = "README.md"
-requires-python = ">=3.11.10"
+requires-python = ">=3.12"
 dependencies = [
-    "accelerate>=1.7.0",
-    "datasets>=3.6.0",
-    "einops>=0.8.1",
-    "langchain-community>=0.3.23",
-    "langchain-openai>=0.3.16",
-    "numexpr>=2.10.2",
-    "oaieval>=1.0.6",
-    "openai>=1.78.0",
-    "rich>=14.0.0",
-    "sentence-transformers>=4.1.0",
-    "transformers>=4.51.3",
-    "trlx",
+    "rich>=14.1.0",
+    "sentence-transformers>=5.1.0",
+    "transformers>=4.55.2",
 ]
 
-[tool.uv.sources]
-trlx = { git = "https://github.com/CarperAI/trlx.git" }
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"

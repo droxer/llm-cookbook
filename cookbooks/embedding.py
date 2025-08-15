@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 embedder = SentenceTransformer(
-    "BAAI/bge-large-zh-v1.5",
-    # "jinaai/jina-embeddings-v3",
+    # "BAAI/bge-large-zh-v1.5",
+    "jinaai/jina-embeddings-v4",
     trust_remote_code=True,
 )
 

@@ -5,7 +5,14 @@ description = "LLM Cookbook"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=1.10.0",
+    "datasets>=4.0.0",
+    "dotenv>=0.9.9",
+    "mlx>=0.28.0",
+    "peft>=0.17.0",
+    "python-dotenv>=1.1.1",
     "rich>=14.1.0",
+    "safetensors>=0.6.2",
     "sentence-transformers>=5.1.0",
     "transformers>=4.55.2",
 ]

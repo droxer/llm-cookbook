@@ -2,4 +2,8 @@
 .cache
 .DS_Store
 db
+cog_adapters
+mlx_data
+models/*
+datasets/*
 
